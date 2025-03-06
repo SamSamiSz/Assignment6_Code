@@ -19,16 +19,30 @@ jobs:
           architecture: x64
 
       - name: Install Linter
-        ##TODO
+        run: echo "Checkstyle is managed via the Maven plugin; nothing to install."
+
 
       - name: Run Checkstyle
-        ##TODO
+        run: mvn checkstyle:checkstyle
 
       - name: Upload Checkstyle Result
-        ##TODO
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: checkstyle-report
+          path: target/checkstyle-result.xml
+
 
       - name: Run Maven Test
-        ##TODO
+        run: mvn test
 
-      - name: Jacoco Report
-        ##TODO
+
+      - name: Generate Jacoco Report
+        run: mvn jacoco:report
+
+      - name: Upload Jacoco Coverage Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: jacoco-report
+          path: target/site/jacoco
