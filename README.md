@@ -1,6 +1,6 @@
 # Barnes and Noble Book Purchasing Simulation
 
-![CI](https://github.com/<your-username>/<your-repo>/actions/workflows/SE333_CI.yml/badge.svg)
+[![CI](https://github.com/SamSamiSz/Assignment6_Code/actions/workflows/SE333_CI.yml/badge.svg)](https://github.com/SamSamiSz/Assignment6_Code/actions/workflows/SE333_CI.yml)
 
 This project simulates a book purchasing process using the `BarnesAndNoble` class, developed as part of the
 SE-333 Software Testing Assignment 6. The assignment focuses on both specification-based (black-box) and
